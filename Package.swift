@@ -19,6 +19,7 @@ let package = Package(
                           url: "https://admixercloudcreatives.blob.core.windows.net/public/ios-sdk/AdmixerSDK_0.8.6.xcframework.zip",
                           checksum: "ed659bacc45d716ea9df78eb25c2555d50e2e63f43baf8bc25f526925ec9f7fe")
 
-        ]
+        ],
+    swiftLanguageVersions: [.v5]
 )
 
