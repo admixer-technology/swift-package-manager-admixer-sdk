@@ -16,10 +16,9 @@ let package = Package(
             // Targets are the basic building blocks of a package, defining a module or a test suite.
             // Targets can depend on other targets in this package and products from dependencies.
             .binaryTarget(name: "AdmixerSDK",
-                          url: "https://admixercloudcreatives.blob.core.windows.net/public/ios-sdk/AdmixerSDK_0.8.6.xcframework.zip",
-                          checksum: "ed659bacc45d716ea9df78eb25c2555d50e2e63f43baf8bc25f526925ec9f7fe")
+                          url: "https://admixercloudcreatives.blob.core.windows.net/public/ios-sdk/AdmixerSDK.xcframework.zip",
+                          checksum: "a3c3124c9917302babfdbb0613c10024b0f191045b60701da178cc26c96ed673")
 
-        ],
-    swiftLanguageVersions: [.v5]
+        ]
 )
 
