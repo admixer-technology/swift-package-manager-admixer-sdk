@@ -1,0 +1,671 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name AdmixerSDK
+import AVFoundation
+import AVKit
+import AdSupport
+@_exported import AdmixerSDK
+import CoreGraphics
+import CoreTelephony
+import Foundation
+import MessageUI
+import StoreKit
+import Swift
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class AMNativeAdRequest : ObjectiveC.NSObject {
+  public var shouldLoadIconImage: Swift.Bool
+  public var shouldLoadMainImage: Swift.Bool
+  @objc public var placementId: Swift.String?
+  @objc public var adType: AdmixerSDK.AMAdType
+  @objc public var memberId: Swift.Int
+  @objc public var publisherId: Swift.Int
+  @objc public var contentId: Swift.String?
+  @objc public var location: AdmixerSDK.AMLocation?
+  @objc public var age: Swift.String?
+  @objc public var gender: AdmixerSDK.AMGender
+  @objc public var externalUid: Swift.String?
+  @objc public var ortbObject: Foundation.Data?
+  @objc weak public var delegate: (any AdmixerSDK.AMNativeAdRequestDelegate)?
+  @objc override dynamic public init()
+  @objc public func loadAd()
+  public func setPlacementId(_ placementId: Swift.String?)
+  @objc public func setRequiredAssets(_ requiredAssets: [Swift.Int])
+  @objc public func setOptionalAssets(_ optionalAssets: [Swift.Int])
+  public func assetsIntersect()
+  public func setPublisherId(_ newPublisherId: Swift.Int)
+  @objc public func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat)
+  @objc public func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat, precision: Swift.Int)
+  @objc public func addCustomKeyword(withKey key: Swift.String, value: Swift.String)
+  @objc public func removeCustomKeyword(withKey key: Swift.String)
+  @objc public func clearCustomKeywords()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class AMBannerAdView : AdmixerSDK.AMAdView {
+  @objc @_Concurrency.MainActor(unsafe) public var adSize: CoreFoundation.CGSize {
+    @objc get
+    @objc set(adSize)
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var adSizes: [Foundation.NSValue] {
+    @objc get
+    @objc set(values)
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var autoRefreshInterval: Swift.Double
+  @_Concurrency.MainActor(unsafe) weak public var rootViewController: UIKit.UIViewController?
+  @objc @_Concurrency.MainActor(unsafe) public var loadedAdSize: CoreFoundation.CGSize
+  @objc @_Concurrency.MainActor(unsafe) public var shouldResizeAdToFitContainer: Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init(frame: CoreFoundation.CGRect)
+  @objc @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreFoundation.CGRect, placementId: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) convenience public init(frame: CoreFoundation.CGRect, placementId: Swift.String, adSize size: CoreFoundation.CGSize)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override public func loadAd()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToWindow()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func didMoveToSuperview()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AMVideoPlayerSettings : ObjectiveC.NSObject {
+  public var showClickThruControl: Swift.Bool
+  public var showVolumeControl: Swift.Bool
+  public var showSkip: Swift.Bool
+  public var learnMoreLabelName: Swift.String?
+  public var skipLabelName: Swift.String?
+  public var playerBackgroundColor: Swift.String?
+  public var instreamBackgroundColor: Swift.String?
+  public static let sharedInstance: AdmixerSDK.AMVideoPlayerSettings
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AMGDPRSettings {
+  public class func setConsentString(_ consentString: Swift.String)
+  public class func setConsentRequired(_ consentRequired: Foundation.NSNumber?)
+  public class func reset()
+  public class func getConsentString() -> Swift.String?
+  public class func getConsentRequired() -> Foundation.NSNumber?
+  @objc deinit
+}
+@objc public protocol AMAdProtocolFoundationCore : ObjectiveC.NSObjectProtocol {
+  @objc var memberId: Swift.Int { get }
+  @objc var publisherId: Swift.Int { get set }
+  @objc var location: AdmixerSDK.AMLocation? { get set }
+  @objc var age: Swift.String? { get set }
+  @objc var gender: AdmixerSDK.AMGender { get set }
+  @objc var externalUid: Swift.String? { get set }
+  @objc var contentId: Swift.String? { get set }
+  @objc var ortbObject: Foundation.Data? { get set }
+  @objc func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat)
+  @objc func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat, precision: Swift.Int)
+  @objc func addCustomKeyword(withKey key: Swift.String, value: Swift.String)
+  @objc func removeCustomKeyword(withKey key: Swift.String)
+  @objc func clearCustomKeywords()
+}
+@_inheritsConvenienceInitializers @objc public class AMNativeAdResponse : ObjectiveC.NSObject {
+  @objc public var title: Swift.String?
+  @objc public var body: Swift.String?
+  @objc public var callToAction: Swift.String?
+  public var likes: Swift.Float?
+  @objc public var iconImage: UIKit.UIImage?
+  @objc public var iconImageSize: CoreFoundation.CGSize
+  @objc public var mainImage: UIKit.UIImage?
+  @objc public var mainImageURL: Foundation.URL?
+  @objc public var mainImageSize: CoreFoundation.CGSize
+  @objc public var iconImageURL: Foundation.URL?
+  @objc public var sponsoredBy: Swift.String?
+  @objc public var creativeId: Swift.String?
+  @objc public var adResponseInfo: AdmixerSDK.AMAdResponseInfo?
+  @objc public var additionalDescription: Swift.String?
+  public var expired: Swift.Bool
+  public var vastXML: Swift.String?
+  @objc public var privacyLink: Swift.String?
+  @objc weak public var delegate: (any AdmixerSDK.AMNativeAdDelegate)?
+  @objc public var clickThroughAction: AdmixerSDK.AMClickThroughAction
+  @objc public func registerView(forTracking view: AdmixerSDK.AMNativeAdView, withRootViewController controller: UIKit.UIViewController)
+  @objc deinit
+  @objc public func adWasClicked()
+  @objc public func willPresentAd()
+  @objc public func didPresentAd()
+  @objc public func willCloseAd()
+  @objc public func didCloseAd()
+  @objc public func willLeaveApplication()
+  @objc override dynamic public init()
+}
+@_inheritsConvenienceInitializers @objc public class AMLocation : ObjectiveC.NSObject {
+  public var latitude: CoreFoundation.CGFloat
+  public var longitude: CoreFoundation.CGFloat
+  public var timestamp: Foundation.Date?
+  public var horizontalAccuracy: CoreFoundation.CGFloat
+  public static func getWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat) -> AdmixerSDK.AMLocation?
+  public static func getWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat, precision: Swift.Int) -> AdmixerSDK.AMLocation?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol AMNativeAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func nativeAdWasClicked(_ response: Any)
+  @objc optional func nativeAdWasClicked(_ response: Any, withURL clickURLString: Swift.String, fallbackURL clickFallbackURLString: Swift.String)
+  @objc optional func nativeAdWillPresent(_ response: Any)
+  @objc optional func nativeAdDidPresent(_ response: Any)
+  @objc optional func nativeAdWillClose(_ response: Any)
+  @objc optional func nativeAdDidClose(_ response: Any)
+  @objc optional func nativeAdWillLeaveApplication(_ response: Any)
+}
+@objc public enum AMLogLevel : Swift.Int {
+  case all = 0
+  case mark = 9
+  case trace = 10
+  case debug = 20
+  case info = 30
+  case warn = 40
+  case error = 50
+  case off = 60
+  public static var currentLevel: AdmixerSDK.AMLogLevel
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public func AMLogMark(_ args: Swift.String...)
+public func AMLogMarkMessage(_ args: Swift.String...)
+public func AMLogTrace(_ args: Swift.String...)
+public func AMLogDebug(_ args: Swift.String...)
+public func AMLogInfo(_ args: Swift.String...)
+public func AMLogWarn(_ args: any Swift.CustomStringConvertible...)
+public func AMLogError(_ args: Swift.String...)
+@objc public protocol AMNativeAdRequestDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func adRequest(_ request: AdmixerSDK.AMNativeAdRequest, didReceive response: AdmixerSDK.AMNativeAdResponse)
+  @objc func adRequest(_ request: AdmixerSDK.AMNativeAdRequest, didFailToLoadWithError error: any Swift.Error, with adResponseInfo: AdmixerSDK.AMAdResponseInfo?)
+}
+@objc @_inheritsConvenienceInitializers public class AMTargetingParameters : ObjectiveC.NSObject {
+  public var customKeywords: [Swift.String : Swift.String]?
+  public var age: Swift.String?
+  public var location: AdmixerSDK.AMLocation?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AMAdResponseInfo : ObjectiveC.NSObject {
+  public var creativeId: Swift.String?
+  public var adType: AdmixerSDK.AMAdType?
+  public var placementId: Swift.String?
+  public var memberId: Swift.Int
+  public var contentSource: Swift.String?
+  public var networkName: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum AMAdResponseCode : Swift.Int {
+  case amDefaultCode = -1
+  case amAdResponseSuccessful = 0
+  case amAdResponseInvalidRequest
+  case amAdResponseUnableToFill
+  case amAdResponseMediatedSDKUnavailable
+  case amAdResponseNetworkError
+  case amAdResponseInternalError
+  case amAdResponseBadFormat = 100
+  case amAdResponseBadURL
+  case amAdResponseBadURLConnection
+  case amAdResponseNonViewResponse
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum AMGender : Swift.Int {
+  case unknown = 0
+  case male
+  case female
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum AMNativeAdNetworkCode : Swift.Int {
+  case admixer
+  case facebook
+  case inMobi
+  case yahoo
+  case custom
+  case adMob
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum AMAdType : Swift.Int {
+  case unknown = 0
+  case banner = 1
+  case video = 2
+  case native = 3
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum AMClickThroughAction : Swift.Int {
+  case returnURL
+  case openDeviceBrowser
+  case openSDKBrowser
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum AMReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class AMReachability {
+  public typealias NetworkReachable = (AdmixerSDK.AMReachability) -> ()
+  public typealias NetworkUnreachable = (AdmixerSDK.AMReachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: AdmixerSDK.AMReachability.NetworkStatus, b: AdmixerSDK.AMReachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    @available(*, deprecated, renamed: "unavailable")
+    case none
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    public var code: Swift.Int {
+      get
+    }
+    public static func == (a: AdmixerSDK.AMReachability.Connection, b: AdmixerSDK.AMReachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: AdmixerSDK.AMReachability.NetworkReachable?
+  public var whenUnreachable: AdmixerSDK.AMReachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: AdmixerSDK.AMReachability.Connection {
+    get
+  }
+  public var connection: AdmixerSDK.AMReachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension AdmixerSDK.AMReachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public protocol AMCustomAdapterDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func didFail(toLoadAd errorCode: AdmixerSDK.AMAdResponseCode)
+  @objc func adWasClicked()
+  @objc func willPresentAd()
+  @objc func didPresentAd()
+  @objc func willCloseAd()
+  @objc func didCloseAd()
+  @objc func willLeaveApplication()
+}
+@objc public protocol AMCustomAdapter : ObjectiveC.NSObjectProtocol {
+  @objc var delegate: (any AdmixerSDK.AMCustomAdapterDelegate)? { get set }
+  @objc init()
+}
+@objc public protocol AMCustomAdapterBanner : AdmixerSDK.AMCustomAdapter {
+  @objc func requestAd(with size: CoreFoundation.CGSize, rootViewController: UIKit.UIViewController?, serverParameter parameterString: Swift.String?, adUnitId idString: Swift.String?, targetingParameters: AdmixerSDK.AMTargetingParameters?)
+  @objc var bannerDelegate: (any AdmixerSDK.AMCustomAdapterBannerDelegate)? { get set }
+}
+@objc public protocol AMCustomAdapterInterstitial : AdmixerSDK.AMCustomAdapter {
+  @objc func requestAd(withParameter parameterString: Swift.String?, adUnitId idString: Swift.String?, targetingParameters: AdmixerSDK.AMTargetingParameters?)
+  @objc func present(from viewController: UIKit.UIViewController?)
+  @objc func isReady() -> Swift.Bool
+  @objc var interstitialDelegate: (any AdmixerSDK.AMCustomAdapterInterstitialDelegate)? { get set }
+}
+public protocol AMCustomAdapterRewarded : AdmixerSDK.AMCustomAdapter {
+  func requestAd(withParameter paramenterString: Swift.String?, adUnitId idString: Swift.String?, targetingParameters: AdmixerSDK.AMTargetingParameters?)
+  func present(from viewController: UIKit.UIViewController?)
+  func isReady() -> Swift.Bool
+  var rewardedDelegate: (any AdmixerSDK.AMCustomAdapterRewardedDelegate)? { get set }
+}
+@objc public protocol AMCustomAdapterBannerDelegate : AdmixerSDK.AMCustomAdapterDelegate {
+  @objc func didLoadBannerAd(_ view: UIKit.UIView?)
+}
+@objc public protocol AMCustomAdapterInterstitialDelegate : AdmixerSDK.AMCustomAdapterDelegate {
+  @objc func didLoadInterstitialAd(_ adapter: (any AdmixerSDK.AMCustomAdapterInterstitial)?)
+  @objc func failedToDisplayAd()
+}
+public protocol AMCustomAdapterRewardedDelegate : AdmixerSDK.AMCustomAdapterDelegate {
+  func didLoadRewardedAd(_ adapter: (any AdmixerSDK.AMCustomAdapterRewarded)?)
+  func adRewarded(_ item: AdmixerSDK.AMRewardedItem)
+  func failedToDisplayAd()
+}
+@objc public protocol AMInstreamVideoAdLoadDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func adDidReceiveAd(_ ad: Any)
+  @objc optional func ad(_ ad: Any, requestFailedWithError error: any Swift.Error)
+}
+@objc public protocol AMInstreamVideoAdPlayDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func adDidComplete(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adCompletedFirstQuartile(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adCompletedMidQuartile(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adCompletedThirdQuartile(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adMute(_ ad: AdmixerSDK.AMAdView, withStatus muteStatus: Swift.Bool)
+  @objc optional func adWasClicked(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adWasClicked(_ ad: AdmixerSDK.AMAdView, withURL urlString: Swift.String)
+  @objc optional func adWillClose(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adDidClose(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adWillPresent(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adDidPresent(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adWillLeaveApplication(_ ad: AdmixerSDK.AMAdView)
+  @objc optional func adPlayStarted(_ ad: AdmixerSDK.AMAdView)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AMInstreamVideoAd : AdmixerSDK.AMAdView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frame: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public init(placementId: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func loadAd(with loadDelegate: (any AdmixerSDK.AMInstreamVideoAdLoadDelegate)?) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) public func play(withContainer adContainer: UIKit.UIView, with playDelegate: (any AdmixerSDK.AMInstreamVideoAdPlayDelegate)?)
+  @_Concurrency.MainActor(unsafe) public func pauseAd()
+  @_Concurrency.MainActor(unsafe) public func resumeAd()
+  @_Concurrency.MainActor(unsafe) public func removeAd()
+  @_Concurrency.MainActor(unsafe) public func hideClickThruControl()
+  @_Concurrency.MainActor(unsafe) public func showClickThruControl()
+  @_Concurrency.MainActor(unsafe) public func hideVolumeControl()
+  @_Concurrency.MainActor(unsafe) public func showVolumeControl()
+  @_Concurrency.MainActor(unsafe) public func hideSkip()
+  @_Concurrency.MainActor(unsafe) public func showSkip()
+  @_Concurrency.MainActor(unsafe) public func getCreativeWidth() -> Swift.Int?
+  @_Concurrency.MainActor(unsafe) public func getCreativeHeight() -> Swift.Int?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat, precision: Swift.Int)
+  @objc deinit
+}
+@objc public enum AMNativeAdAsset : Swift.Int {
+  case IMAGE_ICON = 13, IMAGE_MAIN = 14, TITLE = 15, SPONSORED = 1, DESCRIPTION = 2, RATING = 3, LIKES = 4, DOWNLOADS = 5, PRICE = 6, SALEPRICE = 7, PHONE = 8, ADDRESS = 9, DESC2 = 10, DISPLAYURL = 11, CTA = 12
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class AMRewardedItem : ObjectiveC.NSObject {
+  @objc public var type: Swift.String {
+    get
+  }
+  @objc public var amount: Foundation.NSDecimalNumber! {
+    get
+  }
+  required public init(rewardType: Swift.String, rewardAmount: Foundation.NSDecimalNumber)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class AMNativeAdImageCache : ObjectiveC.NSObject {
+  public class func image(forURL url: Foundation.URL) -> UIKit.UIImage?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class AMInterstitialAd : AdmixerSDK.AMAdView {
+  @objc @_Concurrency.MainActor(unsafe) public var isReady: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var closeDelay: Foundation.TimeInterval {
+    @objc get
+    @objc set(closeDelay)
+  }
+  @_Concurrency.MainActor(unsafe) public var dismissOnClick: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var dismissOnClickAnimated: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) convenience public init(placementId: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func display(from controller: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) public func display(from vc: UIKit.UIViewController, autoDismissDelay delay: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frame: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@objc public protocol AMInterstitialAdDelegate : AdmixerSDK.AMAdDelegate {
+  @objc optional func adFailed(toDisplay ad: AdmixerSDK.AMInterstitialAd)
+}
+@objc public protocol AMNativeCustomAdapter : ObjectiveC.NSObjectProtocol {
+  @objc init()
+  @objc weak var requestDelegate: (any AdmixerSDK.AMNativeCustomAdapterRequestDelegate)? { get set }
+  @objc weak var nativeAdDelegate: (any AdmixerSDK.AMNativeCustomAdapterAdDelegate)? { get set }
+  @objc var expired: Swift.Bool { get set }
+  @objc func requestNativeAd(withServerParameter parameterString: Swift.String?, adUnitId: Swift.String?, targetingParameters: AdmixerSDK.AMTargetingParameters?)
+  @objc optional func registerView(forImpressionTrackingAndClickHandling view: AdmixerSDK.AMNativeAdView, withRootViewController rvc: UIKit.UIViewController)
+  @objc optional func registerView(forImpressionTracking view: UIKit.UIView)
+  @objc optional func handleClick(fromRootViewController rvc: UIKit.UIViewController)
+  @objc optional func unregisterViewFromTracking()
+  @objc func isViewAtLeastHalfVisible() -> Swift.Bool
+}
+@objc public protocol AMNativeCustomAdapterRequestDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func didLoadNativeAd(_ response: AdmixerSDK.AMNativeMediatedAdResponse)
+  @objc func didFail(toLoadNativeAd errorCode: AdmixerSDK.AMAdResponseCode)
+}
+@objc public protocol AMNativeCustomAdapterAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func didInteractWithParams()
+  @objc func adWasClicked()
+  @objc func willPresentAd()
+  @objc func didPresentAd()
+  @objc func willCloseAd()
+  @objc func didCloseAd()
+  @objc func willLeaveApplication()
+  @objc func adDidLogImpression()
+}
+@objc public protocol AMBannerAdViewDelegate : AdmixerSDK.AMAdDelegate {
+}
+@objc public protocol AMAdDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func adDidReceiveAd(_ ad: Any)
+  @objc optional func ad(_ loadInstance: Any, didReceiveNativeAd responseInstance: Any)
+  @objc optional func ad(_ ad: Any, requestFailedWithError error: any Swift.Error)
+  @objc optional func adWasClicked(_ ad: Any)
+  @objc optional func adWasClicked(_ ad: AdmixerSDK.AMAdView, withURL urlString: Swift.String)
+  @objc optional func adWillClose(_ ad: Any)
+  @objc optional func adDidClose(_ ad: Any)
+  @objc optional func adWillPresent(_ ad: Any)
+  @objc optional func adDidPresent(_ ad: Any)
+  @objc optional func adWillLeaveApplication(_ ad: Any)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AMRewardedAd : AdmixerSDK.AMAdView {
+  @objc @_Concurrency.MainActor(unsafe) public var isReady: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var closeDelay: Foundation.TimeInterval {
+    @objc get
+    @objc set(closeDelay)
+  }
+  @_Concurrency.MainActor(unsafe) public var dismissOnClick: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var dismissOnClickAnimated: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) convenience public init(placementId: Swift.String)
+  @objc @_Concurrency.MainActor(unsafe) public func display(from controller: UIKit.UIViewController)
+  @_Concurrency.MainActor(unsafe) public func display(from vc: UIKit.UIViewController, autoDismissDelay delay: Foundation.TimeInterval)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var frame: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @objc deinit
+}
+@objc public protocol AMRewardedAdDelegate : AdmixerSDK.AMAdDelegate {
+  @objc optional func adFailed(toDisplay ad: AdmixerSDK.AMRewardedAd)
+  @objc optional func adRewarded(_ ad: AdmixerSDK.AMRewardedAd, userDidEarn reward: AdmixerSDK.AMRewardedItem)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) open class AMAdView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc public var memberId: Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public var publisherId: Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc public var location: AdmixerSDK.AMLocation?
+  @_Concurrency.MainActor(unsafe) @objc public var age: Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc public var gender: AdmixerSDK.AMGender
+  @_Concurrency.MainActor(unsafe) @objc public var externalUid: Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc public var contentId: Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc public var ortbObject: Foundation.Data?
+  @_Concurrency.MainActor(unsafe) @objc public var placementId: Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc public var clickThroughAction: AdmixerSDK.AMClickThroughAction
+  @_Concurrency.MainActor(unsafe) @objc public var creativeId: Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc public var shouldServePublicServiceAnnouncements: Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: (any AdmixerSDK.AMAdDelegate)?
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func awakeFromNib()
+  @objc deinit
+  @objc @_Concurrency.MainActor(unsafe) public func loadAd()
+}
+extension AdmixerSDK.AMAdView {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat, precision: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func addCustomKeyword(withKey key: Swift.String, value: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func removeCustomKeyword(withKey key: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func clearCustomKeywords()
+}
+public enum AMJSON : Swift.Codable, Swift.Equatable {
+  case boolean(Swift.Bool)
+  case number(Swift.Double)
+  case string(Swift.String)
+  case array([AdmixerSDK.AMJSON?])
+  case object([Swift.String : AdmixerSDK.AMJSON?])
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: AdmixerSDK.AMJSON, b: AdmixerSDK.AMJSON) -> Swift.Bool
+}
+extension AdmixerSDK.AMJSON : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.Bool)
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension AdmixerSDK.AMJSON : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.Int)
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension AdmixerSDK.AMJSON : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.Double)
+  public typealias FloatLiteralType = Swift.Double
+}
+extension AdmixerSDK.AMJSON : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension AdmixerSDK.AMJSON : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: AdmixerSDK.AMJSON?...)
+  public typealias ArrayLiteralElement = AdmixerSDK.AMJSON?
+}
+extension AdmixerSDK.AMJSON : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, AdmixerSDK.AMJSON?)...)
+  public typealias Key = Swift.String
+  public typealias Value = AdmixerSDK.AMJSON?
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class AMNativeAdView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var titleView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var bodyView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var sponsoredView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var imageView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var mainImageView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var callToActionView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var logoView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var likesView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var downloadsView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var priceView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var phoneView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var adressView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var salePricaView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var description2View: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var displayUrlView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public var containerView: UIKit.UIView!
+  @_Concurrency.MainActor(unsafe) public func getClicableViews() -> [UIKit.UIView]
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class AMNativeAdStarRating : ObjectiveC.NSObject {
+  @objc deinit
+}
+@objc public class AMNativeMediatedAdResponse : AdmixerSDK.AMNativeAdResponse, AdmixerSDK.AMNativeCustomAdapterAdDelegate {
+  public init?(customAdapter adapter: (any AdmixerSDK.AMNativeCustomAdapter)?, networkCode: AdmixerSDK.AMNativeAdNetworkCode)
+  @objc deinit
+  @objc public func adDidLogImpression()
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AMBaseUrlConfig : ObjectiveC.NSObject {
+  public static let sharedInstance: AdmixerSDK.AMBaseUrlConfig
+  public var adRequestBaseUrl: Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class AMSDKSettings {
+  public static let sharedInstance: AdmixerSDK.AMSDKSettings
+  public var baseUrlConfig: AdmixerSDK.AMBaseUrlConfig {
+    get
+  }
+  @objc deinit
+}
+extension AdmixerSDK.AMNativeAdRequest : AdmixerSDK.AMAdProtocolFoundationCore {}
+extension AdmixerSDK.AMLogLevel : Swift.Equatable {}
+extension AdmixerSDK.AMLogLevel : Swift.Hashable {}
+extension AdmixerSDK.AMLogLevel : Swift.RawRepresentable {}
+extension AdmixerSDK.AMAdResponseCode : Swift.Equatable {}
+extension AdmixerSDK.AMAdResponseCode : Swift.Hashable {}
+extension AdmixerSDK.AMAdResponseCode : Swift.RawRepresentable {}
+extension AdmixerSDK.AMGender : Swift.Equatable {}
+extension AdmixerSDK.AMGender : Swift.Hashable {}
+extension AdmixerSDK.AMGender : Swift.RawRepresentable {}
+extension AdmixerSDK.AMNativeAdNetworkCode : Swift.Equatable {}
+extension AdmixerSDK.AMNativeAdNetworkCode : Swift.Hashable {}
+extension AdmixerSDK.AMNativeAdNetworkCode : Swift.RawRepresentable {}
+extension AdmixerSDK.AMAdType : Swift.Equatable {}
+extension AdmixerSDK.AMAdType : Swift.Hashable {}
+extension AdmixerSDK.AMAdType : Swift.RawRepresentable {}
+extension AdmixerSDK.AMClickThroughAction : Swift.Equatable {}
+extension AdmixerSDK.AMClickThroughAction : Swift.Hashable {}
+extension AdmixerSDK.AMClickThroughAction : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Connection")
+extension AdmixerSDK.AMReachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension AdmixerSDK.AMReachability.NetworkStatus : Swift.Hashable {}
+extension AdmixerSDK.AMReachability.Connection : Swift.Equatable {}
+extension AdmixerSDK.AMReachability.Connection : Swift.Hashable {}
+extension AdmixerSDK.AMInstreamVideoAd : AdmixerSDK.AMAdProtocolFoundationCore {}
+extension AdmixerSDK.AMNativeAdAsset : Swift.Equatable {}
+extension AdmixerSDK.AMNativeAdAsset : Swift.Hashable {}
+extension AdmixerSDK.AMNativeAdAsset : Swift.RawRepresentable {}
+extension AdmixerSDK.AMAdView : AdmixerSDK.AMAdProtocolFoundationCore {}
