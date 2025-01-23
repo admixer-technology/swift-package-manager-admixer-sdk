@@ -662,7 +662,6 @@ extension AdmixerSDK.AMReachability.NetworkStatus : Swift.Equatable {}
 extension AdmixerSDK.AMReachability.NetworkStatus : Swift.Hashable {}
 extension AdmixerSDK.AMReachability.Connection : Swift.Equatable {}
 extension AdmixerSDK.AMReachability.Connection : Swift.Hashable {}
-extension AdmixerSDK.AMInstreamVideoAd : AdmixerSDK.AMAdProtocolFoundationCore {}
 extension AdmixerSDK.AMNativeAdAsset : Swift.Equatable {}
 extension AdmixerSDK.AMNativeAdAsset : Swift.Hashable {}
 extension AdmixerSDK.AMNativeAdAsset : Swift.RawRepresentable {}
