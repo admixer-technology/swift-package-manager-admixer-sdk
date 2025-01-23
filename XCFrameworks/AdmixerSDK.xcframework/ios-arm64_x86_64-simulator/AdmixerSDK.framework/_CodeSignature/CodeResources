@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/AdmixerSDK-Swift.h</key>
 		<data>
-		TNctOtFJMe2LfFUfARbIPRlG2UQ=
+		r9Wx2Ka2DAwhj5MSf7yUc1F+x0c=
 		</data>
 		<key>Headers/AdmixerSDK.h</key>
 		<data>
@@ -30,43 +30,43 @@
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		JqwcTwBVjvgloRYm8Kd/f0gt9rc=
+		R5QErQrp/UZcFI2Aexf37yFL46Q=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		LQi7Ax7CWNLOvSBOigOCQP7ZDBM=
+		Gry0bogjz9lXbxxD3kwxaw9Vip8=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		FT8DZn6cWZUsKN+CGf8bwr2EpeY=
+		fquif6Np8OEfjWPUpnt0AR2WMPg=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LQi7Ax7CWNLOvSBOigOCQP7ZDBM=
+		Gry0bogjz9lXbxxD3kwxaw9Vip8=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		arUTEiVO6M6Ooahvyqj6tUpPDqQ=
+		v5hCruFxEtPO81orHAcu2ooat2g=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		JqwcTwBVjvgloRYm8Kd/f0gt9rc=
+		R5QErQrp/UZcFI2Aexf37yFL46Q=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		hqlG1MiAokpUtgYpceKCzXwB/uc=
+		zCVda6gfXUYGH7FPsu4Ba9GuQSQ=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		91pOlUiayQDDvfJbSezOvieJduI=
+		dOqCGt1kOkIwPl5xcWyEDV23whg=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hqlG1MiAokpUtgYpceKCzXwB/uc=
+		zCVda6gfXUYGH7FPsu4Ba9GuQSQ=
 		</data>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mM+Sr8tuaOCwXaf33zOa/O/0zuI=
+		EuejWdcLU16uVaIIAGGT1il8GJU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -192,7 +192,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			njfkmFWPeI3cvWHpw2XbLfvwceSRAEmJveyPwAgKld0=
+			T+T0MxQxUrF3FI/jNjtPmuPJaikv3E1Si0Ebz582mrE=
 			</data>
 		</dict>
 		<key>Headers/AdmixerSDK.h</key>
@@ -206,70 +206,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5WJ+KmGvlqjhj2ClkKbNOfz3woMvoxlrfK+5q1ntPx4=
+			snbsHG75qG7h83twsgK/IV4oMwneHFWbjEUGRfhfeQQ=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5PzG8uvDnvPp5MpqVgnmBlcsclsEViTr3F2bFnHSVq8=
+			3+pgv+DW1IgikkGbvnIt4bcGCYtHUnscYl8kbiJMa28=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eNhNJu0TPj5/9UbSkPIivGMufpweUsyDCNSIWF0i85E=
+			iayPoViwDXE8WPl4AU8ui65VcbuqOTSxQVWwBVs2GkA=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5PzG8uvDnvPp5MpqVgnmBlcsclsEViTr3F2bFnHSVq8=
+			3+pgv+DW1IgikkGbvnIt4bcGCYtHUnscYl8kbiJMa28=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NIVXZ6EhrKyb82JQsgDzbHAta4N/G63JUHC0ajam2Yg=
+			YB9Y//cRkI6tC0KnjO++9m4/6JJ6YpugmKMBF68tNrY=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5WJ+KmGvlqjhj2ClkKbNOfz3woMvoxlrfK+5q1ntPx4=
+			snbsHG75qG7h83twsgK/IV4oMwneHFWbjEUGRfhfeQQ=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bSQzm10jF/R3H/6Bl3+9vlbwVJpYfwaMAqAbxKGPTVw=
+			PZ/b0sbDwods3AVDbNPZg90/xiKe1i3hPN73lXrE76s=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			78ISoP6bFGTE9dkBRKmp6JVyt4PmGfW6BX8UCb8c1H0=
+			HS8IlaUYkdCv9fxSHYUpc4909RTdRhD4qOJoToL8hrI=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bSQzm10jF/R3H/6Bl3+9vlbwVJpYfwaMAqAbxKGPTVw=
+			PZ/b0sbDwods3AVDbNPZg90/xiKe1i3hPN73lXrE76s=
 			</data>
 		</dict>
 		<key>Modules/AdmixerSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ItUFClWr5B+rRi/9bdVOJ1P4vPi32JNtSwuJuGwjSpM=
+			34tIGmMA1K4qmd416FwsE4prkd03WrtLwWr+HeHFKoI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

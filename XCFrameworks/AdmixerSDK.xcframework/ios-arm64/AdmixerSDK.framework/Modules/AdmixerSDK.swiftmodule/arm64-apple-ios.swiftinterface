@@ -422,8 +422,6 @@ public protocol AMCustomAdapterRewardedDelegate : AdmixerSDK.AMCustomAdapterDele
   @_Concurrency.MainActor(unsafe) public func showSkip()
   @_Concurrency.MainActor(unsafe) public func getCreativeWidth() -> Swift.Int?
   @_Concurrency.MainActor(unsafe) public func getCreativeHeight() -> Swift.Int?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func setLocationWithLatitude(_ latitude: CoreFoundation.CGFloat, longitude: CoreFoundation.CGFloat, timestamp: Foundation.Date?, horizontalAccuracy: CoreFoundation.CGFloat, precision: Swift.Int)
   @objc deinit
 }
 @objc public enum AMNativeAdAsset : Swift.Int {

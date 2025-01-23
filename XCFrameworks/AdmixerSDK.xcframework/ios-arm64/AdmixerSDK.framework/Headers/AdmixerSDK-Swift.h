@@ -507,11 +507,6 @@ SWIFT_CLASS("_TtC10AdmixerSDK17AMInstreamVideoAd")
 @interface AMInstreamVideoAd : AMAdView
 @property (nonatomic) CGRect frame;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-/// Set the user’s current location.  This allows ad buyers to do location targeting, which can increase spend.
-- (void)setLocationWithLatitude:(CGFloat)latitude longitude:(CGFloat)longitude timestamp:(NSDate * _Nullable)timestamp horizontalAccuracy:(CGFloat)horizontalAccuracy;
-/// Set the user’s current location rounded to the number of decimal places specified in “precision”.
-/// Valid values are between 0 and 6 inclusive. If the precision is -1, no rounding will occur.
-- (void)setLocationWithLatitude:(CGFloat)latitude longitude:(CGFloat)longitude timestamp:(NSDate * _Nullable)timestamp horizontalAccuracy:(CGFloat)horizontalAccuracy precision:(NSInteger)precision;
 @end
 
 
